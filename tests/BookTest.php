@@ -11,7 +11,7 @@ class BookTest extends BookTestCase
     {
         $response = $this->json(
             'POST',
-            route('book.search'),
+            route('search'),
             [
                 'query' => 'free'
             ])->response;
@@ -29,7 +29,7 @@ class BookTest extends BookTestCase
     {
         $response = $this->json(
             'POST',
-            route('book.search'),
+            route('search'),
             [
                 'query' => ''
             ])->response;

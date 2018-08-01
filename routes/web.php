@@ -11,6 +11,6 @@
 |
 */
 
-$router->post('books/search', [
-    'as' => 'book.search', 'uses' => 'BookController@search'
+$router->post('search', [
+    'as' => 'search', 'uses' => 'BookController@search'
 ]);
