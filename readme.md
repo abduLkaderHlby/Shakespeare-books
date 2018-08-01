@@ -44,7 +44,7 @@ Setup elasticsearch
     ```
 
 ### Step 2
-- cloning this repository to your machine, and installing all Composer dependencies.
+- cloning this repository to your machine, installing all Composer dependencies and setup env file.
 
     ```bash
     git clone git@github.com:kaderHlby/shakespeare-books.git
@@ -59,10 +59,15 @@ Setup elasticsearch
     ```
     this will take few minutes.
 
-### Step 3
-Next, boot up a server and visit your search forum.
-    ```
-    php -S localhost:8000 -t public
+### Step 3 (optional)
+- run tests
+    ```bash
+    vendor/bin/phpunit
     ```
 
-Visit: `localhost:8000` to search Shakespeare books.
+### Step 4
+- Next, boot up a server 
+    ```bash
+    php -S localhost:8000 -t public
+    ```
+- visit your search forum `localhost:8000` to search Shakespeare books.
