@@ -2,21 +2,29 @@
 
 A small web app that allows users to search within Shakespeare books.
 
+## Installation
+
 ### Prerequisites
 
-- [php](http://php.net/manual/en/install.php)
-- [composer](https://getcomposer.org/download/)
-- [docker](https://docs.docker.com/install/)
+* To run this project, you must have :
+    *    [php](http://php.net/manual/en/install.php)
+    *    [composer](https://getcomposer.org/download/)
+    *    [docker](https://docs.docker.com/install/)
+    
+### Step 1
 
-### Installing
+Begin by cloning this repository to your machine, and installing all Composer dependencies.
 
-- clone the repo
+```bash
+git clone git@github.com:kaderHlby/shakespeare-books.git
+cd shakespeare-books && composer install
+cp .env.example .env
+php artisan Shakespeare-books:install
+```
 
-- go to the repo folder and install all required packages via composer
-    ```
-    composer install
-    ```
-
+### Step 2
+Setup elasticsearch
+    
 - pulling elasticsearch image
     ```
     docker pull docker.elastic.co/elasticsearch/elasticsearch:6.3.1
@@ -53,23 +61,10 @@ A small web app that allows users to search within Shakespeare books.
     this will take few minutes.
 
 
-### Testing
-
-- go to the repo folder and run:
-
-    ```
-    vendor/bin/phpunit
-    ```
-
-### usage
-
-- Serving Your Application
+### Step 3
+Next, boot up a server and visit your search forum.
     ```
     php -S localhost:8000 -t public
     ```
-    
-- go to :
 
-    ```
-    localhost:8000
-    ```
+Visit: `localhost:8000` to search Shakespeare books.
