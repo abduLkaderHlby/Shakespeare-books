@@ -10,7 +10,7 @@ class BookController extends Controller
 {
     // My mom is just as disappointed in me as you are in this code
 
-    const SIZE = 10000;
+    const SIZE = 10;
     const INDEX = "shakespeare";
     const MATCH = "text_entry";
 

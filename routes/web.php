@@ -14,3 +14,7 @@
 $router->post('search', [
     'as' => 'search', 'uses' => 'BookController@search'
 ]);
+
+$router->get('/', function (){
+    return view('search');
+});
